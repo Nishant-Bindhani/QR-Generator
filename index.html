@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Paste or Type Any Kind Of Link!</h1>
+    </div>
+    <section id="main">
+        <div class="main">
+            <div class="content">
+                <h2>QR Code Generator ©</h2>
+                <p class="start">QR Codes allow smartphone users to access your website simply and quickly.</p>
+
+                <p class="ins"> Enter your URL below to generate a QR Code and <strong style="color: red;">Download The image.</strong></p>
+                <div class="formi">
+                    <form action="#" id="create-frm" class="fm">
+                        <input class="input-box-size" id="url" type="text" pattern="^(https?:\/\/)?([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})(\/\S*)?$" placeholder="Enter The URL">
+
+                        <select class="input-box-size" name="size" id="size">
+                    <option value="100">100x100</option>
+                    <option  value="200">200x200</option>
+                    <option value="300" selected>300x300</option>
+                    <option value="400">400x400</option>
+                  </select>
+                        <div class="btn">
+                            <button onclick="downloadit()" class="submit" id="submit" type="submit">
+                    Generate QR Code
+                  </button>
+                            <a href="#" id="btn-save">Save Picture</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="logo-img">
+                <img src="img/qr2.jpg" alt="art" srcset="">
+            </div>
+
+        </div>
+
+        <div id="loading">
+            <div id="spinner"></div>
+            <p>Please Wait</p>
+        </div>
+        <div class="output">
+            <div id="qrcode">
+                <canvas></canvas>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <script src="index.js"></script>
+</body>
+
+
+</html>

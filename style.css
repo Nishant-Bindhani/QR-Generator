@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    height: 50px;
+    background-color: crimson;
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.header h1 {
+    font-size: 1.2rem;
+    padding: .6rem 0 0 6rem;
+}
+
+.logo-img img {
+    margin-top: 2rem;
+    width: 300px;
+    height: 270px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.content h2 {
+    padding-top: 2rem;
+    font-size: 2.2rem;
+    font-weight: 900;
+}
+
+.content .start {
+    margin-top: 7px;
+}
+
+.content p {
+    line-height: 1.8rem;
+}
+
+.content .start {
+    margin-bottom: 5px;
+}
+
+.fm {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 20px;
+}
+
+.input-box-size {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.btn {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.btn button {
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+    background: #28282B;
+    cursor: pointer;
+    transition: all .6s ease-in-out;
+}
+
+button:hover {
+    background: indigo;
+    color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border: none;
+}
+
+#loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#loading p {
+    color: black;
+    font-size: 15px;
+}
+
+#spinner {
+    margin-top: 30px;
+    width: 75px;
+    height: 75px;
+    border: 5px solid crimson;
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.output {
+    margin: 3rem 0 0 20.5%;
+    margin-bottom: 2%;
+}
+
+#btn-save {
+    background-color: green;
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    margin-top: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .6s ease;
+    border-radius: 5px;
+}
+
+#btn-save:hover {
+    background: crimson;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    transform: scale(1.2);
+}
+
+@media (max-width:951px) {
+    .main {
+        margin-left: 1rem;
+    }
+    .content .start {
+        margin-bottom: 2rem;
+    }
+    .output {
+        margin-left: 12%;
+        padding-bottom: 5%;
+    }
+}
+
+@media (max-width:689px) {
+    .main {
+        flex-direction: column-reverse;
+        width: 90%;
+    }
+    .output {
+        padding-left: 13%;
+        padding-bottom: 6%;
+    }
+    .content h2 {
+        font-size: 1.8rem;
+    }
+    .content .start {
+        line-height: 2.1rem;
+    }
+    .content .ins {
+        line-height: 2.1rem;
+    }
+}
+
+@media(max-width:598px) {
+    .logo-img {
+        padding-top: 20px;
+        margin-bottom: -20px;
+    }
+    .output {
+        padding-left: 7%;
+    }
+}
+
+@media(max-width:400px) {
+    .output {
+        margin-left: 15px;
+    }
+}
