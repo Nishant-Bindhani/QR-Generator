@@ -37,9 +37,8 @@ const generateQRCode = async(o) => {
 form.addEventListener('submit', generateQRCode);
 
 const createDownloadLink = () => {
-    const canvas = qrcodeElement.querySelector('canvas');
-    if (canvas) {
-        const imgSrc = canvas.toDataURL("image/jpeg");
+  const imgSrc = qrcodeElement.querySelector('img').src;
+    if (imgSrc) {
         btnSave.href = imgSrc;
     }
 };
